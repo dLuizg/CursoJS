@@ -21,16 +21,18 @@
         Interaja...
     </div>
     <script>
+        //Organização do JS, tem como separar pelo HTML, mas é melhor direto no JS
         var a = window.document.getElementById('area')
+        //EventListener vai "ficar de olho no que está acontecendo para acionar a funçaõ"
         a.addEventListener('click', clicar)
-        a.addEventListener('mousein', entrar)
+        a.addEventListener('mouseenter', entrar)
         a.addEventListener('mouseout', sair)
 
         function clicar() {
             a.innerText = 'Clicou!'
             a.style.background= 'red'
         }
-        function entrar() {
+        function entrar(){
             a.innerText = 'Entrou'
             a.style.background= 'Blue'
         }
