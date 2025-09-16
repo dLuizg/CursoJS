@@ -4,21 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
+    <style>
+        /* Tamanho e tipo da foonte*/
+        body{
+            font: normal 20pt Arial;
+        }
+        /* Tamanho e tipo dos quadradinhos */
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        /* Espaçamento entre a caixa de número e o resultado */
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Somando valores</h1>
+    <!-- Declarando os postos visuais -->
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="Somar" onclick="somar()">
     <div id="res">Resultado</div>
     <script>
         function somar(){
+            //Pega os dados inseridos nas caixas pelos respectivos Id's
             var tn1 = window.document.getElementById('txtn1')
             var tn2 = window.document.getElementById('txtn2')
-            var res = window.document.getElementById()
+            var res = window.document.getElementById('res')
+            //Por se tratar de números, precisa fazer essa alteração pois chega em forma de texto
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
             var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
         }
     </script>
 </body>
